@@ -1,0 +1,92 @@
+{
+    "manufacturer": "Mona Mayrhofer",
+    "keyboard_name": "nio_paws",
+    "maintainer": "MonaMayrhofer",
+    "diode_direction": "COL2ROW",
+    "features": {
+        "bootmagic": false,
+        "command": true,
+        "console": true,
+        "extrakey": false,
+        "mousekey": false,
+        "nkro": false
+    },
+    "matrix_pins": {
+        "cols": ["B12", "B13", "B14", "B15", "A8", "A15", "B3"],
+        "rows": ["B4", "B6", "B7", "B8", "B9"]
+    },
+    "board": "BLACKPILL_STM32_F401",
+    "bootloader": "stm32-dfu",
+    "processor": "STM32F401",
+    "url": "",
+    "usb": {
+        "device_version": "1.0.0",
+        "pid": "0xBEEF",
+        "vid": "0xFEED",
+        "no_startup_check": true
+    },
+    "split": {
+        "enabled": true,
+        "transport": {
+            "protocol": "serial"
+        }
+    },
+    "layouts": {
+        "LAYOUT_niopaws": {
+            "layout": [
+                { "matrix": [0, 0], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [0, 1], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [0, 2], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [0, 3], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [0, 4], "x": 0, "y": 0.0, "w": 1.5 },
+
+                { "matrix": [1, 0], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [1, 1], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [1, 2], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [1, 3], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [1, 4], "x": 0, "y": 0.0, "w": 1.5 },
+
+                { "matrix": [2, 0], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [2, 1], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [2, 2], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [2, 3], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [2, 4], "x": 0, "y": 0.0, "w": 1.5 },
+
+                { "matrix": [3, 3], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [3, 4], "x": 0, "y": 0.0, "w": 1.5 },
+
+                { "matrix": [4, 3], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [4, 4], "x": 0, "y": 0.0, "w": 1.5 }
+
+
+                { "matrix": [5, 0], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [5, 1], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [5, 2], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [5, 3], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [5, 4], "x": 0, "y": 0.0, "w": 1.5 },
+
+                { "matrix": [6, 0], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [6, 1], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [6, 2], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [6, 3], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [6, 4], "x": 0, "y": 0.0, "w": 1.5 },
+
+                { "matrix": [7, 0], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [7, 1], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [7, 2], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [7, 3], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [7, 4], "x": 0, "y": 0.0, "w": 1.5 },
+
+                { "matrix": [8, 3], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [8, 4], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [8, 5], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [8, 6], "x": 0, "y": 0.0, "w": 1.5 },
+
+                { "matrix": [9, 5], "x": 0, "y": 0.0, "w": 1.5 },
+                { "matrix": [9, 6], "x": 0, "y": 0.0, "w": 1.5 }
+
+
+            ]
+        }
+    }
+}

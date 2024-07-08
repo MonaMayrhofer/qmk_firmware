@@ -1,0 +1,12 @@
+#pragma once
+
+#define MASTER_LEFT
+
+// #define SERIAL_USART_FULL_DUPLEX
+#define SERIAL_USART_TX_PIN A2
+// #define SERIAL_USART_RX_PIN A3
+#define HAL_USE_SERIAL TRUE
+
+#define SERIAL_USART_DRIVER SD2
+
+#define SERIAL_DEBUG
