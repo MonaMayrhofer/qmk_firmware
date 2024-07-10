@@ -1,1 +1,2 @@
 SERIAL_DRIVER = usart
+DEBUG_ENABLE = yes
