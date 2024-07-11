@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 DE_H,       DE_J,       DE_K,       DE_L,       KC_ENTER,       KC_TAB,
                                 DE_N,       DE_M,       DE_COMM,    DE_DOT,     DE_MINS,
         KC_RCTL,       MO(NL_SPECIALS),     KC_RSFT,    _______,
-        KC_TRNS,       MO(NL_CONTROL)
+        KC_LALT,       MO(NL_CONTROL)
         ),
 
 
