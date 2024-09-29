@@ -21,21 +21,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [NL_BASE_QWERTZ] = LAYOUT_niopaws(
 
         //Left
-        KC_ESC     ,DE_Q       ,DE_W       ,DE_E       ,DE_R       ,DE_T
-       ,KC_LSFT    ,DE_A       ,DE_S       ,DE_D       ,DE_F       ,DE_G
-                   ,DE_Y       ,DE_X       ,DE_C       ,DE_V       ,DE_B
-                                           ,KC_LEFT_GUI,MO(NL_PROGRAMMER)      ,KC_SPC        ,_______
-                                                                               ,KC_LCTL       ,KC_RALT
+        DE_1       ,DE_2       ,DE_W       ,DE_E       ,DE_R       ,DE_T       ,DE_4
+       ,KC_ESC     ,DE_Q       ,DE_S       ,DE_D       ,DE_F       ,DE_G       ,DE_5
+       ,KC_LSFT    ,DE_A       ,DE_X       ,DE_C       ,DE_V       ,DE_B
+                   ,DE_Y                   ,KC_LEFT_GUI,DE_8                   ,KC_SPC        ,DE_6
+                                                                               ,DE_7          ,KC_RALT
 
         //Right
                                ,DE_Z       ,DE_U       ,DE_I       ,DE_O       ,DE_P          ,DE_SS
                                ,DE_H       ,DE_J       ,DE_K       ,DE_L       ,KC_ENTER      ,KC_TAB
                                ,DE_N       ,DE_M       ,DE_COMM    ,DE_DOT     ,DE_MINS
-       ,_______ ,MO(NL_CONTROL),MO(NL_SPECIALS),_______
-       ,KC_LALT    ,_______
+       ,DE_2    ,DE_9          ,DE_0       ,DE_1
+       ,KC_LALT    ,DE_3
         ),
 
-
+/*
 
     [NL_SPECIALS] = LAYOUT_niopaws(
 
@@ -103,6 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        ,_______    ,_______
         )
 
+*/
 
 
 /*
