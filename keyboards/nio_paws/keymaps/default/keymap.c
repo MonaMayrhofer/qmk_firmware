@@ -21,11 +21,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [NLBQZ] = LAYOUT_niopaws(
 
         //Left
-        DE_1       ,DE_2       ,DE_W       ,DE_E       ,DE_R       ,DE_T       ,DE_4
+        _______    ,_______    ,DE_W       ,DE_E       ,DE_R       ,DE_T       ,DE_4
        ,KC_ESC     ,DE_Q       ,DE_S       ,DE_D       ,DE_F       ,DE_G       ,DE_5
        ,KC_LSFT    ,DE_A       ,DE_X       ,DE_C       ,DE_V       ,DE_B
-                   ,DE_Y                               ,KC_LEFT_GUI,MO(NLPRO)  ,KC_SPC        ,DE_6
-                                                                               ,DE_7          ,KC_RALT
+                   ,DE_Y                               ,KC_LEFT_GUI,MO(NLPRO)  ,KC_SPC        ,_______
+                                                                               ,KC_LCTL       ,KC_RALT
 
         //Right
                                ,DE_Z       ,DE_U       ,DE_I       ,DE_O       ,DE_P          ,DE_SS
