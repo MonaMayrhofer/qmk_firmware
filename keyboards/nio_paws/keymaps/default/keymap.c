@@ -10,7 +10,8 @@ enum layer_names {
     NLSPC,//NL_SPECIALS,
     NLPRO,//NL_PROGRAMMER,
     NLCTL,//NL_CONTROL,
-    NLADV//NL_ADVANCED
+    NLADV,//NL_ADVANCED
+    NLSGL//NL_SINGLE_HANDED
 };
 
 // https://docs.qmk.fm/keycodes
@@ -21,10 +22,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [NLBQZ] = LAYOUT_niopaws(
 
         //Left
-        _______    ,_______    ,DE_W       ,DE_E       ,DE_R       ,DE_T       ,DE_4
+        KC_BSPC    ,_______    ,DE_W       ,DE_E       ,DE_R       ,DE_T       ,TO(NLSGL)
        ,KC_ESC     ,DE_Q       ,DE_S       ,DE_D       ,DE_F       ,DE_G       ,DE_5
        ,KC_LSFT    ,DE_A       ,DE_X       ,DE_C       ,DE_V       ,DE_B
-                   ,DE_Y                               ,KC_LEFT_GUI,MO(NLPRO)  ,KC_SPC        ,_______
+                   ,DE_Y                               ,KC_LEFT_GUI,MO(NLPRO)  ,KC_SPC        ,KC_LALT
                                                                                ,KC_LCTL       ,KC_RALT
 
         //Right
@@ -32,8 +33,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                ,DE_H       ,DE_J       ,DE_K       ,DE_L       ,KC_ENTER      ,KC_TAB
                                ,DE_N       ,DE_M       ,DE_COMM    ,DE_DOT     ,DE_MINS
        ,_______    ,MO(NLCTL)  ,MO(NLSPC)  ,DE_1
-       ,KC_LALT    ,_______
+       ,KC_NO      ,_______
         ),
+
+    [NLSGL] = LAYOUT_niopaws(
+
+        //Left
+        KC_NO      ,DE_Q       ,DE_W       ,DE_E       ,KC_NO      ,KC_NO      ,TO(NLBQZ)
+       ,KC_ESC     ,DE_A       ,DE_S       ,DE_D       ,DE_F       ,KC_NO      ,KC_NO
+       ,KC_LSFT    ,KC_NO      ,KC_NO      ,KC_NO      ,KC_NO      ,KC_NO
+                   ,KC_NO                              ,KC_NO      ,KC_NO      ,KC_SPC        ,KC_LALT
+                                                                               ,KC_LCTL       ,KC_RALT
+
+        //Right
+                               ,DE_Z       ,KC_NO      ,KC_NO      ,KC_NO      ,KC_NO         ,KC_NO
+                               ,DE_H       ,KC_NO      ,KC_NO      ,KC_NO      ,KC_NO         ,KC_NO
+                               ,DE_N       ,KC_NO      ,KC_NO      ,KC_NO      ,KC_NO
+       ,KC_NO      ,KC_NO      ,KC_NO      ,KC_NO
+       ,KC_NO      ,KC_NO
+        ),
+
 
 
     [NLSPC] = LAYOUT_niopaws(
