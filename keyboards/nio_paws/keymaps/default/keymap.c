@@ -23,7 +23,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         //Left
         KC_BSPC    ,_______    ,DE_W       ,DE_E       ,DE_R       ,DE_T       ,TO(NLSGL)
-       ,KC_ESC     ,DE_Q       ,DE_S       ,DE_D       ,DE_F       ,DE_G       ,DE_5
+       ,KC_ESC     ,DE_Q       ,DE_S       ,DE_D       ,DE_F       ,DE_G       ,MO(NLCTL)
        ,KC_LSFT    ,DE_A       ,DE_X       ,DE_C       ,DE_V       ,DE_B
                    ,DE_Y                               ,KC_LEFT_GUI,MO(NLPRO)  ,KC_SPC        ,KC_LALT
                                                                                ,KC_LCTL       ,KC_RALT
