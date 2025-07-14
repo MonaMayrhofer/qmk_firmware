@@ -29,10 +29,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                ,KC_LCTL       ,KC_RALT
 
         //Right
-                               ,DE_Z       ,DE_U       ,DE_I       ,DE_O       ,DE_P          ,DE_SS
-                               ,DE_H       ,DE_J       ,DE_K       ,DE_L       ,KC_ENTER      ,KC_TAB
-                               ,DE_N       ,DE_M       ,DE_COMM    ,DE_DOT     ,DE_MINS
-       ,_______    ,MO(NLCTL)  ,MO(NLSPC)  ,DE_1
+                   ,_______    ,DE_Z       ,DE_U       ,DE_I       ,DE_O       ,DE_P          ,DE_SS
+                   ,_______    ,DE_H       ,DE_J       ,DE_K       ,DE_L       ,KC_ENTER      ,KC_TAB
+                               ,DE_N       ,DE_M       ,DE_COMM    ,DE_DOT     ,DE_MINS       ,_______
+       ,_______    ,MO(NLCTL)  ,MO(NLSPC)  ,DE_1                               ,_______
        ,KC_NO      ,_______
         ),
 
@@ -46,10 +46,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                ,KC_LCTL       ,KC_RALT
 
         //Right
-                               ,DE_Z       ,KC_NO      ,KC_NO      ,KC_NO      ,KC_NO         ,KC_NO
-                               ,DE_H       ,KC_NO      ,KC_NO      ,KC_NO      ,KC_NO         ,KC_NO
-                               ,DE_N       ,KC_NO      ,KC_NO      ,KC_NO      ,KC_NO
-       ,KC_NO      ,KC_NO      ,KC_NO      ,KC_NO
+                   ,_______    ,DE_Z       ,KC_NO      ,KC_NO      ,KC_NO      ,KC_NO         ,KC_NO
+                   ,_______    ,DE_H       ,KC_NO      ,KC_NO      ,KC_NO      ,KC_NO         ,KC_NO
+                               ,DE_N       ,KC_NO      ,KC_NO      ,KC_NO      ,KC_NO         ,_______
+       ,KC_NO      ,KC_NO      ,KC_NO      ,KC_NO                              ,_______
        ,KC_NO      ,KC_NO
         ),
 
@@ -65,10 +65,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                ,_______       ,_______
 
         //Right
-                               ,DE_6       ,DE_7       ,DE_8       ,DE_9       ,DE_0        ,DE_ACUT
-                               ,KC_LEFT    ,KC_DOWN    ,KC_UP      ,KC_RIGHT   ,_______     ,_______
-                               ,_______    ,_______    ,_______    ,_______    ,_______
-       ,_______    ,KC_TRNS    ,_______    ,_______
+                    ,_______   ,DE_6       ,DE_7       ,DE_8       ,DE_9       ,DE_0        ,DE_ACUT
+                    ,_______   ,KC_LEFT    ,KC_DOWN    ,KC_UP      ,KC_RIGHT   ,_______     ,_______
+                               ,_______    ,_______    ,_______    ,_______    ,_______     ,_______
+       ,_______    ,KC_TRNS    ,_______    ,_______                            ,_______
        ,_______    ,_______
         ),
     [NLPRO] = LAYOUT_niopaws(
@@ -81,10 +81,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                ,_______     ,_______
 
         //Right
-                               ,DE_AMPR    ,DE_LCBR    ,DE_LBRC    ,DE_RBRC     ,DE_RCBR    ,_______
-                               ,DE_SLSH    ,_______    ,DE_LPRN    ,DE_RPRN     ,DE_EQL     ,_______
-                               ,_______    ,_______    ,_______    ,_______     ,_______
-       ,_______    ,_______    ,_______    ,_______
+                   ,_______    ,DE_AMPR    ,DE_LCBR    ,DE_LBRC    ,DE_RBRC     ,DE_RCBR    ,_______
+                   ,_______    ,DE_SLSH    ,_______    ,DE_LPRN    ,DE_RPRN     ,DE_EQL     ,_______
+                               ,_______    ,_______    ,_______    ,_______     ,_______    ,_______
+       ,_______    ,_______    ,_______    ,_______                             ,_______
        ,_______    ,_______
         ),
 
@@ -98,10 +98,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                ,_______     ,_______
 
         //Right
-                               ,KC_F6      ,KC_F7      ,KC_F8      ,KC_F9       ,KC_F10     ,_______
-                               ,KC_HOME    ,KC_PGDN    ,KC_PGUP    ,_______     ,_______    ,_______
-                               ,KC_END     ,_______    ,_______    ,_______     ,_______
-       ,MO(NLADV) ,_______     ,_______    ,_______
+                  ,_______     ,KC_F6      ,KC_F7      ,KC_F8      ,KC_F9       ,KC_F10     ,_______
+                  ,_______     ,KC_HOME    ,KC_PGDN    ,KC_PGUP    ,_______     ,_______    ,_______
+                               ,KC_END     ,_______    ,_______    ,_______     ,_______    ,_______
+       ,MO(NLADV) ,_______     ,_______    ,_______                             ,_______
        ,_______   ,_______
         ),
 
@@ -115,10 +115,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                ,_______     ,_______
 
         //Right
-                               ,KC_F16     ,KC_F17     ,KC_F18     ,KC_F19      ,KC_F20     ,KC_F23
-                               ,_______    ,_______    ,_______    ,_______     ,_______    ,KC_F24
-                               ,DB_TOGG    ,QK_BOOT    ,QK_RBT     ,_______     ,_______
-       ,_______    ,_______    ,_______    ,_______
+                   ,_______    ,KC_F16     ,KC_F17     ,KC_F18     ,KC_F19      ,KC_F20     ,KC_F23
+                   ,_______    ,_______    ,_______    ,_______    ,_______     ,_______    ,KC_F24
+                               ,DB_TOGG    ,QK_BOOT    ,QK_RBT     ,_______     ,_______    ,_______
+       ,_______    ,_______    ,_______    ,_______                             ,_______
        ,_______    ,_______
         )
 
