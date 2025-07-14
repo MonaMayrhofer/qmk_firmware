@@ -1,2 +1,3 @@
 SERIAL_DRIVER = usart
 DEBUG_ENABLE = yes
+CONSOLE_ENABLE = yes

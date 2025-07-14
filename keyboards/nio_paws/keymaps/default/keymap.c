@@ -22,18 +22,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [NLBQZ] = LAYOUT_niopaws(
 
         //Left
-        KC_BSPC    ,_______    ,DE_W       ,DE_E       ,DE_R       ,DE_T       ,TO(NLSGL)
+        KC_BSPC    ,DB_TOGG    ,DE_W       ,DE_E       ,DE_R       ,DE_T       ,TO(NLSGL)
        ,KC_ESC     ,DE_Q       ,DE_S       ,DE_D       ,DE_F       ,DE_G       ,MO(NLCTL)
        ,KC_LSFT    ,DE_A       ,DE_X       ,DE_C       ,DE_V       ,DE_B
                    ,DE_Y                               ,KC_LEFT_GUI,MO(NLPRO)  ,KC_SPC        ,KC_LALT
                                                                                ,KC_LCTL       ,KC_RALT
 
         //Right
-                   ,_______    ,DE_Z       ,DE_U       ,DE_I       ,DE_O       ,DE_P          ,DE_SS
-                   ,_______    ,DE_H       ,DE_J       ,DE_K       ,DE_L       ,KC_ENTER      ,KC_TAB
-                               ,DE_N       ,DE_M       ,DE_COMM    ,DE_DOT     ,DE_MINS       ,_______
-       ,_______    ,MO(NLCTL)  ,MO(NLSPC)  ,DE_1                               ,_______
-       ,KC_NO      ,_______
+                   ,DE_X       ,DE_Z       ,DE_U       ,DE_I       ,DE_O       ,_______       ,_______
+                   ,DE_X       ,DE_H       ,DE_J       ,DE_K       ,DE_L       ,DE_P          ,DE_SS
+                               ,DE_N       ,DE_M       ,DE_COMM    ,DE_DOT     ,KC_ENTER      ,KC_TAB
+       ,DE_X       ,MO(NLCTL)  ,MO(NLSPC)  ,DE_1                               ,DE_MINS
+       ,KC_NO      ,DE_X
         ),
 
     [NLSGL] = LAYOUT_niopaws(
@@ -65,8 +65,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                ,_______       ,_______
 
         //Right
-                    ,_______   ,DE_6       ,DE_7       ,DE_8       ,DE_9       ,DE_0        ,DE_ACUT
-                    ,_______   ,KC_LEFT    ,KC_DOWN    ,KC_UP      ,KC_RIGHT   ,_______     ,_______
+                    ,_______   ,DE_6       ,DE_7       ,DE_8       ,DE_9       ,_______     ,_______
+                    ,_______   ,KC_LEFT    ,KC_DOWN    ,KC_UP      ,KC_RIGHT   ,DE_0        ,DE_ACUT
                                ,_______    ,_______    ,_______    ,_______    ,_______     ,_______
        ,_______    ,KC_TRNS    ,_______    ,_______                            ,_______
        ,_______    ,_______
@@ -81,9 +81,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                ,_______     ,_______
 
         //Right
-                   ,_______    ,DE_AMPR    ,DE_LCBR    ,DE_LBRC    ,DE_RBRC     ,DE_RCBR    ,_______
-                   ,_______    ,DE_SLSH    ,_______    ,DE_LPRN    ,DE_RPRN     ,DE_EQL     ,_______
-                               ,_______    ,_______    ,_______    ,_______     ,_______    ,_______
+                   ,_______    ,DE_AMPR    ,DE_LCBR    ,DE_LBRC    ,DE_RBRC     ,_______    ,_______
+                   ,_______    ,DE_SLSH    ,_______    ,DE_LPRN    ,DE_RPRN     ,DE_RCBR    ,_______
+                               ,_______    ,_______    ,_______    ,_______     ,DE_EQL     ,_______
        ,_______    ,_______    ,_______    ,_______                             ,_______
        ,_______    ,_______
         ),
@@ -98,8 +98,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                ,_______     ,_______
 
         //Right
-                  ,_______     ,KC_F6      ,KC_F7      ,KC_F8      ,KC_F9       ,KC_F10     ,_______
-                  ,_______     ,KC_HOME    ,KC_PGDN    ,KC_PGUP    ,_______     ,_______    ,_______
+                  ,_______     ,KC_F6      ,KC_F7      ,KC_F8      ,KC_F9       ,_______    ,_______
+                  ,_______     ,KC_HOME    ,KC_PGDN    ,KC_PGUP    ,_______     ,KC_F10     ,_______
                                ,KC_END     ,_______    ,_______    ,_______     ,_______    ,_______
        ,MO(NLADV) ,_______     ,_______    ,_______                             ,_______
        ,_______   ,_______
@@ -115,8 +115,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                                ,_______     ,_______
 
         //Right
-                   ,_______    ,KC_F16     ,KC_F17     ,KC_F18     ,KC_F19      ,KC_F20     ,KC_F23
-                   ,_______    ,_______    ,_______    ,_______    ,_______     ,_______    ,KC_F24
+                   ,_______    ,KC_F16     ,KC_F17     ,KC_F18     ,KC_F19      ,_______    ,KC_F23
+                   ,_______    ,_______    ,_______    ,_______    ,_______     ,KC_F20     ,KC_F24
                                ,DB_TOGG    ,QK_BOOT    ,QK_RBT     ,_______     ,_______    ,_______
        ,_______    ,_______    ,_______    ,_______                             ,_______
        ,_______    ,_______
@@ -151,3 +151,10 @@ void keyboard_post_init(void){
     debug_keyboard=true;
 }
 
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  // If console is enabled, it will print the matrix position and status of each key pressed
+#ifdef CONSOLE_ENABLE
+    uprintf("KL: kc: 0x%04X, col: %2u, row: %2u, pressed: %u, time: %5u, int: %u, count: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time, record->tap.interrupted, record->tap.count);
+#endif
+  return true;
+}
